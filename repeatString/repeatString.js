@@ -1,16 +1,12 @@
-const repeatString = function(repeatingString, numberOfTimes) {
+const repeatString = function(word, times) {
 	
-	let tempString = repeatingString;
-	if(numberOfTimes>0) {
-		for(let i=0;i<numberOfTimes-1;i++) {
-			repeatingString = repeatingString+tempString;
-		}
-	}
-	else if(numberOfTimes<0)	{
+	repeatingString = '';
+
+	if(times<0) {
 		repeatingString = 'ERROR';
 	}
-	else {
-		repeatingString='';
+	for(let i=0;i<times;i++) {
+		repeatingString += word;
 	}
 
 	return repeatingString;
